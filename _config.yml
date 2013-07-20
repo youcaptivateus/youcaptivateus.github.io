@@ -2,12 +2,12 @@ baseurl:
 permalink: pretty
 markdown: rdiscount
 prose:
-  rooturl: '_posts'
+  rooturl: '_posts/posts/'
   siteurl: 'http://youcaptivate.us/'
   relativeLinks: 'http://youcaptivate.us/links.jsonp'
   media: 'media'
   metadata:
-    _posts:
+    _posts/posts/:
       - name: "category"
         field:
           element: "hidden"
@@ -36,7 +36,7 @@ prose:
               value: "apples"
             - name: "Bananas"
               value: "bananas"
-    _posts/static:
+    _posts/posts/static:
       - name: "layout"
         field:
           element: "hidden"

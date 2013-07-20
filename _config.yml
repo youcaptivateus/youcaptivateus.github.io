@@ -1,6 +1,13 @@
 baseurl: 
 permalink: pretty
 markdown: rdiscount
+exclude:
+  - .gitignore
+  - README.md
+  - config.rg
+  - Procfile
+  - Gemfile
+  - Gemfile.lock
 prose:
   rooturl: '_posts'
   siteurl: 'http://youcaptivate.us/'

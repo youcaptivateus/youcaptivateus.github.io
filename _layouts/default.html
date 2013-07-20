@@ -1,30 +1,78 @@
 ---
-title: 'This is my Site Title'
+title: 'You Captivate Us'
 ---
 <!DOCTYPE html>
-<html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
 <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
   <title>Site Title {% if page.url != '/index.html' %}| {{page.title}}{% endif %}</title>
   <meta charset='UTF-8'/>
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-  <link rel='shortcut icon' href='{{site.baseurl}}/img/favicon.ico' type='image/x-icon' />
+  <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
+
+  <!-- TODO -->
+  <!-- <link rel='shortcut icon' href='{{site.baseurl}}/img/favicon.ico' type='image/x-icon' /> -->
+
   <link href='{{site.baseurl}}/site.css' rel='stylesheet' />
+  <script src="{{site.baseurl}}/js/vendor/custom.modernizr.js"></script>
 </head>
 <body>
-  <div class='container'>
-    <div class='col12 clearfix'>
-      <div class='header col6 margin3 pad4h'>
-        <div class='clearfix col12'>
-          <div class='menu fr'>
-            <a class='{% if page.section == "blog" %}active{% endif %}' href='{{site.baseurl}}/'>Blog</a>
-            <a class='{% if page.url == "about/" %}active{% endif %}' href='{{site.baseurl}}/about'>About</a>
-            <a href='//github.com/prose/starter'>Fork on GitHub</a>
-          </div>
-          <h1 class='title'><a href='{{site.baseurl}}/'>{{page.title}}</a></h1>
-        </div>
-      </div>
+
+    <!-- NAV -->
+    <nav class="top-bar">
+      <ul class="title-area">
+        <!-- Title Area -->
+        <li class="name">
+          <h1><a href="#"> You Captivate Us  </a></h1>
+        </li>
+        <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Cities</span></a></li>
+      </ul>
+
+      <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+          <li class="divider hide-for-small"></li>
+          <li class=""><a href="#">NYC</a></li>
+          <li class="divider"></li>
+          <li class=""><a href="#">SF</a></li>
+          <li class="divider"></li>
+          <li class=""><a href="#">Paris</a></li>
+          <li class="divider"></li>
+          <li class=""><a href="#">London</a></li>
+          <li class="divider"></li>
+          <li class=""><a href="#">Tokyo</a></li>
+        </ul>
+      </section>
+    </nav>
+    <!-- /NAV -->
+
+
+
+  {{content}}
+
+
+
+  <!-- FOOTER -->
+  <div class="ycu-footer">
+    <div class="row">
+      <div class="small-12 columns">
+        <p class="colophon">Celebrating the cities we love.</p>
+         <p class="copyright"><a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">CC BY-SA 2013</a> by <a href="http://twitter.com/sjwilliams">@sjwilliams</a>. Video copyright by their author.</p>
+      </div>          
     </div>
-    {{content}}
   </div>
+  <!-- /FOOTER -->
+
+  <script>
+    var YCU = YCU || {};
+  </script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/js/vendor/jquery.1.10.1.js"><\/script>')</script>
   <script src='{{site.baseurl}}/site.js'></script>
+  <script src="{{site.baseurl}}/js/video.js"></script>
 </body>

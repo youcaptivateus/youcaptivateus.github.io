@@ -1,7 +1,7 @@
 ---
 published: true
 category: blog
-layout: blog
+layout: video
 splash: "http://placehold.it/1600x500"
 ---
 

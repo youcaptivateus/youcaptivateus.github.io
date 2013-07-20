@@ -1,0 +1,180 @@
+// Global Foundation Settings
+@import "settings";
+
+// Comment out this import if you don't want to use normalize
+@import "normalize";
+
+// Comment out this import if you are customizing you imports below
+// @import "foundation";
+
+// Import specific parts of Foundation by commenting the import "foundation"
+// and uncommenting what you want below. You must uncomment the following if customizing
+
+@import "foundation/components/global"; // *always required
+@import "foundation/components/grid";
+@import "foundation/components/visibility";
+@import "foundation/components/block-grid";
+@import "foundation/components/type";
+@import "foundation/components/buttons";
+@import "foundation/components/forms"; // *requires components/buttons
+@import "foundation/components/custom-forms"; // *requires components/buttons, components/forms
+@import "foundation/components/button-groups"; // *requires components/buttons
+@import "foundation/components/dropdown-buttons"; // *requires components/buttons
+@import "foundation/components/split-buttons"; // *requires components/buttons
+@import "foundation/components/flex-video";
+@import "foundation/components/section";
+@import "foundation/components/top-bar";  // *requires components/grid
+// @import "foundation/components/orbit";
+// @import "foundation/components/reveal";
+// @import "foundation/components/joyride";
+// @import "foundation/components/clearing";
+// @import "foundation/components/alert-boxes";
+// @import "foundation/components/breadcrumbs";
+// @import "foundation/components/keystrokes";
+// @import "foundation/components/labels";
+// @import "foundation/components/inline-lists";
+// @import "foundation/components/pagination";
+// @import "foundation/components/panels";
+// @import "foundation/components/pricing-tables";
+// @import "foundation/components/progress-bars";
+// @import "foundation/components/side-nav";
+// @import "foundation/components/sub-nav";
+// @import "foundation/components/switch";
+// @import "foundation/components/magellan";
+// @import "foundation/components/tables";
+// @import "foundation/components/thumbs";
+// @import "foundation/components/tooltips";
+@import "foundation/components/dropdown";
+
+@import "webicons";
+
+
+body{
+	// font-family: $body-font-family;
+}
+
+.top-bar{
+	margin-bottom: 0;
+	background: #282828 url('../images/skewed_print.png') repeat 0 0;
+}
+
+// name plate
+.top-bar .name h1 a{
+	font-weight: 100;
+	font-size: 1.2em;
+	// font-family: 'Old Standard TT', 'Georgia', serif;
+}
+
+	html.touch .top-bar .name h1 a{
+		font-weight: 300;
+	}
+
+.top-bar-section li a:not(.button){
+	background-color: #282828;
+}
+
+.top-bar-section ul li > a {
+	color: #C5C5C5;
+}
+
+.fullscreen-video-wrapper{
+	background-color: #000;
+}
+
+	.fullscreen-video{
+		background-color: #000;
+		margin: 0 auto 1em auto;
+	}
+
+		.fullscreen-video iframe{
+			width: 100%;
+			height: 100%;
+		}
+
+
+
+
+.ycu-content h2{
+	font-weight: 300;
+}
+
+	.media-readin{
+		font-family: Georgia, serif;
+		// font-weight: 400;
+		font-size: 1.2em;
+	}
+
+	.media-credit{
+		// font-weight: 400;
+		font-size: 0.9em;
+	}
+
+
+	.city, .city-link{
+		display: inline-block;
+	}
+
+		.city{
+			font-weight: 300;
+		}
+
+		.city-link{
+			// text-transform: uppercase;
+			font-size: 0.8em;
+			line-height: 0.9em;
+			margin-left: 0.7em;
+			padding-left: 0.7em;
+			border-left: 1px solid #ccc;
+		}
+
+
+
+ul.social li{
+	display: inline-block;
+	list-style-type: none;
+	margin: 0 3px 0 0;
+	padding: 0;
+}
+
+li.add-video span{
+	display: block;
+	font-size: 64px;
+	line-height: 110px;
+	background-color: #ccc;
+	text-align: center;
+
+	cursor: pointer;
+}
+
+.webicon {
+	-webkit-filter: grayscale(1);
+	-webkit-transition: -webkit-filter 0.3s ease-in; /* chrome & safari */
+}
+
+.webicon:hover, .webicon:active {
+	-webkit-filter: grayscale(0);
+}
+
+
+
+
+/**
+* Footer
+*/
+
+.ycu-footer{
+	margin-top: 3em;
+	text-align: center;
+}
+
+	.colophon{
+		// font-family: 'Old Standard TT', 'Georgia', serif;
+		font-weight: 400;
+		font-size: 1.2em;
+	}
+
+	.copyright{
+		padding: 1.3em 0;
+		border-top: 1px solid #6D6D6D;
+		font-size: 0.7em;
+	}

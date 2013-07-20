@@ -19,7 +19,7 @@
 layout: blog
 category: blog
 published: false
-title: ""
+title: Tag test
 categories: 
   - sanfrancisco
   - newyork

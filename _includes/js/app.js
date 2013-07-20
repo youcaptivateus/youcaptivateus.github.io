@@ -1,5 +1,5 @@
 /**
-* Site-wide functionality. Called before document ready.
+* Site-wide functionality.
 */
 var YCU = YCU || {};
 YCU.Main = {};

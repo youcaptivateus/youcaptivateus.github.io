@@ -8,6 +8,7 @@ exclude:
   - Procfile
   - Gemfile
   - Gemfile.lock
+  - LICENSE.md
 prose:
   rooturl: '_posts'
   siteurl: 'http://youcaptivate.us/'

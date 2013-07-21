@@ -14,7 +14,7 @@
   {% endif %}
 {% endfor %}
 
-{% comment %} If tagSlug existed in the site-wide tags and there is more than one item, print related {% endcomment %}
+{% comment %} If tagSlug existed in the site-wide tags and there is more than one item with that tag, print related {% endcomment %}
 {% assign numpostsincateogry = site.tags[tagSlug]|size %}
 {% if categoryExists and numpostsincateogry > 1 %}
 <h5 class="category-title">More from the {{categoryName}} collection</h5>

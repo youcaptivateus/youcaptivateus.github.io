@@ -62,21 +62,17 @@ section: blog
 
     <!-- Collection Videos -->
 
-    <!-- TODO: use an incude to (like blog.rss in example) for all of these. and maybe some type of extends to include the one above. -->
+    {% for tagSlug in page.tags %}
     <div class="row">
       <div class="large-9 columns">
-        <h5 class="category-title">More from the Timelapse collection</h5>
-        <p class="category-link"><a href="#">View all</a></p>
-        <ul class="small-block-grid-2 large-block-grid-4 video-links">
-          <li><img src="http://b.vimeocdn.com/ts/486/172/48617238_200.jpg"></li>
-          <li><img src="http://b.vimeocdn.com/ts/578/881/57888106_200.jpg"></li>
-          <li><img src="http://b.vimeocdn.com/ts/578/881/57888106_200.jpg"></li>
-          <li><img src="http://b.vimeocdn.com/ts/578/881/57888106_200.jpg"></li>
-        </ul>
+      {% include tag-links.html %}
       </div>
     </div>
+    {% endfor %}
 
-    <div class="row">
+
+
+   <!--  <div class="row">
       <div class="large-9 columns">
         <h5 class="category-title">More from the Bridges collection</h5>
         <p class="category-link"><a href="#">View all</a></p>
@@ -87,6 +83,6 @@ section: blog
           <li><img src="http://b.vimeocdn.com/ts/486/172/48617238_200.jpg"></li>
         </ul>
       </div>
-    </div>
+    </div> -->
 
   </div>

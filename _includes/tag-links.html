@@ -1,0 +1,29 @@
+{% comment %} importing 'tagSlug' from parent {% endcomment %}
+
+{% comment %} Find cooresponding category name from tagSlug {% endcomment %}
+{% assign categoryExists = false %}
+{% for metadata in site.prose.metadata._posts %}
+  {% if metadata['name'] == 'tags' %}
+    {% assign siteTags = metadata['field']['options'] %}
+    {% for sitetag in siteTags %}
+    	{% if sitetag['value'] == tagSlug %}
+    		{% assign categoryExists = true %}
+    		{% assign categoryName = sitetag['name'] %}
+    	{% endif %}    	
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+
+{% comment %} If tagSlug existed in the site-wide tags and there is more than one item, print related {% endcomment %}
+{% assign numpostsincateogry = site.tags[tagSlug]|size %}
+{% if categoryExists and numpostsincateogry > 1 %}
+<h5 class="category-title">More from the {{categoryName}} collection</h5>
+<p class="category-link"><a href="#">View all</a></p>
+<ul class="small-block-grid-2 large-block-grid-4 video-links">
+	{% for post in site.tags[tagSlug] limit:5 %}
+		{% if  post.id != page.id %}
+			<li class="post-image-link post-image-link-{{forloop.index0}}"><a href="{{post.url}}"><img src="http://b.vimeocdn.com/ts/578/881/57888106_200.jpg"></a></li>
+		{% endif %}
+	{% endfor %}
+</ul>
+{% endif %}

@@ -41,10 +41,18 @@ prose:
           label: "Add Tags"
           placeholder: "Choose Tags"
           options:
-            - name: "Apples"
-              value: "apples"
-            - name: "Bananas"
-              value: "bananas"
+            - name: "Stop Motion"
+              value: "stopmotion"
+            - name: "Time Lapse"
+              value: "timelapse"
+            - name: "Bike"
+              value: "bike"
+            - name: "Food"
+              value: "food"
+            - name: "Art"
+              value: "art"
+            - name: "Bridge"
+              value: "bridge"
     _posts/static:
       - name: "layout"
         field:

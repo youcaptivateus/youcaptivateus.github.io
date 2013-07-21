@@ -5,10 +5,10 @@
 {% for metadata in site.prose.metadata._posts %}
   {% if metadata['name'] == 'tags' %}
     {% assign siteTags = metadata['field']['options'] %}
-    {% for sitetag in siteTags %}
-    	{% if sitetag['value'] == tagSlug %}
+    {% for siteTag in siteTags %}
+    	{% if siteTag['value'] == tagSlug %}
     		{% assign tagExists = true %}
-    		{% assign tagName = sitetag['name'] %}
+    		{% assign tagName = siteTag['name'] %}
     	{% endif %}    	
     {% endfor %}
   {% endif %}

@@ -43,12 +43,17 @@ section: blog
     <!-- City Videos -->
     <div class="row">
       <div class="large-9 columns">
-        <h5 class="city">More from San Francisco</h5>
-        <p class="city-link"><a href="#">View all</a></p>
+
+
+
+        <h5 class="category-title">More from San Francisco</h5>
+        <p class="category-link"><a href="#">View all</a></p>
         <ul class="small-block-grid-2 large-block-grid-4 video-links">
-          <li><img src="http://b.vimeocdn.com/ts/578/881/57888106_200.jpg"></li>
-          <li><img src="http://b.vimeocdn.com/ts/486/172/48617238_200.jpg"></li>
-          <li><img src="http://b.vimeocdn.com/ts/148/706/14870667_200.jpg"></li>
+          {% for post in site.categories[page.category] limit:4 %}
+            {% if  post.id != page.id %}
+            <li class="post-image-link post-image-link-{{forloop.index0}}"><a href="{{post.url}}"><img src="http://b.vimeocdn.com/ts/578/881/57888106_200.jpg"></a></li>
+            {% endif %}
+          {% endfor %}
           <li class="add-video"><span>+</span></li>
         </ul>
       </div>
@@ -56,10 +61,12 @@ section: blog
 
 
     <!-- Collection Videos -->
+
+    <!-- TODO: use an incude to (like blog.rss in example) for all of these. and maybe some type of extends to include the one above. -->
     <div class="row">
       <div class="large-9 columns">
-        <h5 class="city">More from the Timelapse collection</h5>
-        <p class="city-link"><a href="#">View all</a></p>
+        <h5 class="category-title">More from the Timelapse collection</h5>
+        <p class="category-link"><a href="#">View all</a></p>
         <ul class="small-block-grid-2 large-block-grid-4 video-links">
           <li><img src="http://b.vimeocdn.com/ts/486/172/48617238_200.jpg"></li>
           <li><img src="http://b.vimeocdn.com/ts/578/881/57888106_200.jpg"></li>
@@ -71,8 +78,8 @@ section: blog
 
     <div class="row">
       <div class="large-9 columns">
-        <h5 class="city">More from the Bridges collection</h5>
-        <p class="city-link"><a href="#">View all</a></p>
+        <h5 class="category-title">More from the Bridges collection</h5>
+        <p class="category-link"><a href="#">View all</a></p>
         <ul class="small-block-grid-2 large-block-grid-4 video-links">
           <li><img src="http://b.vimeocdn.com/ts/578/881/57888106_200.jpg"></li>
           <li><img src="http://b.vimeocdn.com/ts/148/706/14870667_200.jpg"></li>

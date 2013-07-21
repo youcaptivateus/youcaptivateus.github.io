@@ -1,6 +1,6 @@
 ---
 published: true
-category: blog
+category: san-francisco
 layout: video
 splash: "http://placehold.it/1600x500"
 ---

@@ -5135,17 +5135,17 @@ html.touch .top-bar .name h1 a {
 }
 
 /* line 113, ../sass/app.scss */
-.city, .city-link {
+.category-title, .category-link {
   display: inline-block;
 }
 
 /* line 117, ../sass/app.scss */
-.city {
+.category-title {
   font-weight: 300;
 }
 
 /* line 121, ../sass/app.scss */
-.city-link {
+.category-link {
   font-size: 0.8em;
   line-height: 0.9em;
   margin-left: 0.7em;

@@ -44,7 +44,7 @@ section: blog
     <div class="row">
       <div class="large-9 columns">
         <h5 class="category-title">More from San Francisco</h5>
-        <p class="category-link"><a href="#">View all</a></p>
+        <p class="category-link"><a href="{{site.baseurl}}/cities/{{page.categories | first }}/">View all</a></p>
         <ul class="small-block-grid-2 large-block-grid-4 video-links">
           {% for post in site.categories[page.category] limit:4 %}
             {% if  post.id != page.id %}

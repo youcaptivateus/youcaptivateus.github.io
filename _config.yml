@@ -1,6 +1,6 @@
 title: You Captivate Us
 baseurl: 
-permalink: pretty
+permalink: /:year/:month/:day/:title/
 markdown: rdiscount
 exclude:
   - .gitignore

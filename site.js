@@ -16,3 +16,4 @@
 ;{% include js/foundation/foundation.tooltips.js %}
 ;{% include js/foundation/foundation.topbar.js %}
 ;{% include js/app.js %} 
+;{% include js/video.js %} 

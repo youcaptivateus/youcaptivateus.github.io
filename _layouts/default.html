@@ -19,13 +19,12 @@
   <script src="{{site.baseurl}}/js/vendor/custom.modernizr.js"></script>
   <script>
     var YCU = YCU || {};
+    YCU.pageMeta = YCU.pageMeta || {};
+    YCU.pageMeta.title = "{{page.title}}";
   </script>
 </head>
-<body>
-    <!-- {{page}} -->
-    {% for element in page %}
-    {{element}}
-    {% endfor %}
+<body class="layout-{{page.layout}}{% if  page.categories %} category-{{page.categories}}{% endif %}{% if  page.tags %}{% for tags in page.tags %} category-{{tags}}{% endfor %}{% endif %}">
+    {{page}}
 
     <!-- NAV -->
     <nav class="top-bar">

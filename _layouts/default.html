@@ -21,11 +21,15 @@
     var YCU = YCU || {};
     YCU.pageMeta = YCU.pageMeta || {};
     YCU.pageMeta.title = "{{page.title}}";
+    YCU.pageMeta.layout = "{{page.layout}}";
+    YCU.pageMeta.tags = [{% for tag in page.tags %}{% if forloop.first %}{% else %},{% endif %}'{{tag}}'{% endfor %}];
+    YCU.pageMeta.categories = [{% for category in page.categories %}{% if forloop.first %}{% else %},{% endif %}'{{category}}'{% endfor %}];
+    YCU.pageMeta.url = "{{page.url}}";
+    YCU.pageMeta.path = "{{page.path}}";
+    YCU.pageMeta.date = "{{page.date}}";
   </script>
 </head>
 <body class="layout-{{page.layout}}{% if  page.categories %} category-{{page.categories}}{% endif %}{% if  page.tags %}{% for tags in page.tags %} category-{{tags}}{% endfor %}{% endif %}">
-    {{page}}
-
     <!-- NAV -->
     <nav class="top-bar">
       <ul class="title-area">

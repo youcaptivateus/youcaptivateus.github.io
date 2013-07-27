@@ -3,6 +3,7 @@ baseurl:
 siteurl: http://youcaptivate.us/
 permalink: /:year/:month/:day/:title/
 markdown: rdiscount
+paginate: 2
 exclude:
   - .gitignore
   - README.md

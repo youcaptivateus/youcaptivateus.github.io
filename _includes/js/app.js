@@ -26,7 +26,7 @@ YCU.Main = {};
 			// base DOM elements
 			this.$w = $(window);
 			this.$nav = $('nav.top-bar');
-
+			this.$topper = $('.ycu-topper');
 
 			this.$videoLinks = $('ul.video-links');
 

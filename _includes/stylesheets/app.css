@@ -5130,38 +5130,39 @@ html.touch .top-bar .name h1 a {
 /* line 105, ../sass/app.scss */
 .ycu-topper {
   width: 100%;
+  overflow: hidden;
 }
 
 /**
 * Main Content Block
 */
-/* line 112, ../sass/app.scss */
+/* line 113, ../sass/app.scss */
 .ycu-content h2 {
   font-weight: 300;
 }
 
-/* line 116, ../sass/app.scss */
+/* line 117, ../sass/app.scss */
 .media-readin {
   font-family: Georgia, serif;
   font-size: 1.2em;
 }
 
-/* line 121, ../sass/app.scss */
+/* line 122, ../sass/app.scss */
 .media-credit {
   font-size: 0.9em;
 }
 
-/* line 125, ../sass/app.scss */
+/* line 126, ../sass/app.scss */
 .category-title, .category-link {
   display: inline-block;
 }
 
-/* line 129, ../sass/app.scss */
+/* line 130, ../sass/app.scss */
 .category-title {
   font-weight: 300;
 }
 
-/* line 133, ../sass/app.scss */
+/* line 134, ../sass/app.scss */
 .category-link {
   font-size: 0.8em;
   line-height: 0.9em;
@@ -5170,7 +5171,7 @@ html.touch .top-bar .name h1 a {
   border-left: 1px solid #ccc;
 }
 
-/* line 141, ../sass/app.scss */
+/* line 142, ../sass/app.scss */
 ul.social li {
   display: inline-block;
   list-style-type: none;
@@ -5178,7 +5179,7 @@ ul.social li {
   padding: 0;
 }
 
-/* line 148, ../sass/app.scss */
+/* line 149, ../sass/app.scss */
 li.add-video span {
   display: block;
   font-size: 64px;
@@ -5188,38 +5189,81 @@ li.add-video span {
   cursor: pointer;
 }
 
-/* line 158, ../sass/app.scss */
+/* line 159, ../sass/app.scss */
 .webicon {
   -webkit-filter: grayscale(1);
   -webkit-transition: -webkit-filter 0.3s ease-in;
   /* chrome & safari */
 }
 
-/* line 163, ../sass/app.scss */
+/* line 164, ../sass/app.scss */
 .webicon:hover, .webicon:active {
   -webkit-filter: grayscale(0);
 }
 
-/* line 167, ../sass/app.scss */
+/* line 168, ../sass/app.scss */
 .colophon {
   font-weight: 400;
   font-size: 1.2em;
 }
 
-/* line 172, ../sass/app.scss */
+/* line 173, ../sass/app.scss */
 .copyright {
   font-size: 0.7em;
 }
 
 /**
+* City Page
+*/
+/* line 182, ../sass/app.scss */
+.city-topper-wrapper {
+  width: 100%;
+  height: 460px;
+  overflow: hidden;
+}
+/* line 187, ../sass/app.scss */
+.city-topper-wrapper .row {
+  margin-top: 300px;
+}
+/* line 191, ../sass/app.scss */
+.city-topper-wrapper h1 {
+  color: #fff;
+}
+
+/* line 196, ../sass/app.scss */
+.city-topper-image {
+  position: relative;
+  height: 370px;
+  overflow: hidden;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* line 208, ../sass/app.scss */
+.no-touch .city-topper-image {
+  background-attachment: fixed;
+}
+
+/* line 212, ../sass/app.scss */
+.city-topper-meta {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+}
+
+/**
 * Footer
 */
-/* line 181, ../sass/app.scss */
+/* line 224, ../sass/app.scss */
 .ycu-footer {
   margin-top: 3em;
   text-align: center;
 }
-/* line 185, ../sass/app.scss */
+/* line 228, ../sass/app.scss */
 .ycu-footer .copyright {
   padding: 1.3em 0;
   border-top: 1px solid #6D6D6D;

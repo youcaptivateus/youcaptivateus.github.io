@@ -1,6 +1,35 @@
 ---
 layout: page
 ---
+{% if  page.bannerOffset %}
+	{% assign bannerOffset = page.bannerOffset %}
+{% else %}
+	{% assign bannerOffset = 0 %}
+{% endif %}
+
+
+{{content}}
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
+
+<script type="text/template" id="template-city-topper"> 
+	<div class="city-topper-wrapper"> 
+		<div class="city-topper-image" style="background-image:url({{page.banner}}); background-position-y:-{{bannerOffset}}px">
+
+			<div class="row">
+				<div class="small-12 columns">
+					<h1>{{page.title}}</h1>
+				</div>
+			</div>
+			<div class="city-topper-meta">
+				<p class="credit"><a href="{{page.bannerSrc}}">{{page.bannerCredit}}</a></p>
+			</div>
+		</div>
+	</div>
+</script>
 <script type="text/javascript">
 var YCU = YCU || {};
 YCU.pageMeta = YCU.pageMeta || {};
@@ -9,10 +38,7 @@ YCU.pageMeta.slug = "{{page.slug}}";
 YCU.pageMeta.banner = "{{page.banner}}";
 YCU.pageMeta.banner = "{{page.banner}}";
 YCU.pageMeta.bannerSrc = "{{page.bannerSrc}}";
-YCU.pageMeta.bannerSrc = "{{page.bannerSrc}}";
-YCU.pageMeta.bannerCredit = "{{page.bannerCredit}}";
 YCU.pageMeta.bannerCredit = "{{page.bannerCredit}}";
 YCU.pageMeta.bannerLicense = "{{page.bannerLicense}}";
+YCU.pageMeta.bannerOffset = "{{page.bannerOffset}}";
 </script>
-{{page}}
-{{content}}

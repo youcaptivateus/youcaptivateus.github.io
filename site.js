@@ -1,5 +1,6 @@
 ---
 ---
+;{% include js/vendor/underscore-min.js %}
 ;{% include js/foundation/foundation.js %}
 ;{% include js/foundation/foundation.alerts.js %}
 ;{% include js/foundation/foundation.clearing.js %}
@@ -15,5 +16,7 @@
 ;{% include js/foundation/foundation.section.js %}
 ;{% include js/foundation/foundation.tooltips.js %}
 ;{% include js/foundation/foundation.topbar.js %}
+;{% include js/vendor/jquery.stellar.min.js %}
 ;{% include js/app.js %} 
 ;{% include js/video.js %} 
+;{% include js/city.js %} 

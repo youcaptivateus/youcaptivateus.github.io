@@ -1,6 +1,7 @@
 title: You Captivate Us
+tagling: Celebrating the cities we love.
 baseurl: 
-siteurl: http://youcaptivate.us/
+siteurl: http://youcaptivate.us
 permalink: /:year/:month/:day/:title/
 markdown: rdiscount
 paginate: 2

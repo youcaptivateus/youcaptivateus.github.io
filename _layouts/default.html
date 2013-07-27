@@ -30,46 +30,46 @@
   </script>
 </head>
 <body class="layout-{{page.layout}}{% if  page.categories %} category-{{page.categories}}{% endif %}{% if  page.tags %}{% for tags in page.tags %} category-{{tags}}{% endfor %}{% endif %}">
-    <!-- NAV -->
-    <nav class="top-bar">
-      <ul class="title-area">
-        <!-- Title Area -->
-        <li class="name">
-          <h1><a href="/">You Captivate Us</a></h1>
-        </li>
-        <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-        <li class="toggle-topbar menu-icon"><a href="#"><span>Cities</span></a></li>
+  <!-- NAV -->
+  <nav class="top-bar">
+    <ul class="title-area">
+      <!-- Title Area -->
+      <li class="name">
+        <h1><a href="/">You Captivate Us</a></h1>
+      </li>
+      <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Cities</span></a></li>
+    </ul>
+
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">
+        <li class="divider hide-for-small"></li>
+        <li class=""><a href="#">NYC</a></li>
+        <li class="divider"></li>
+        <li class=""><a href="#">SF</a></li>
+        <li class="divider"></li>
+        <li class=""><a href="#">Paris</a></li>
+        <li class="divider"></li>
+        <li class=""><a href="#">London</a></li>
+        <li class="divider"></li>
+        <li class=""><a href="#">Tokyo</a></li>
       </ul>
+    </section>
+  </nav>
+  <!-- /NAV -->
 
-      <section class="top-bar-section">
-        <!-- Right Nav Section -->
-        <ul class="right">
-          <li class="divider hide-for-small"></li>
-          <li class=""><a href="#">NYC</a></li>
-          <li class="divider"></li>
-          <li class=""><a href="#">SF</a></li>
-          <li class="divider"></li>
-          <li class=""><a href="#">Paris</a></li>
-          <li class="divider"></li>
-          <li class=""><a href="#">London</a></li>
-          <li class="divider"></li>
-          <li class=""><a href="#">Tokyo</a></li>
-        </ul>
-      </section>
-    </nav>
-    <!-- /NAV -->
-
+  {{page}}
 
 
   {{content}}
-
 
 
   <!-- FOOTER -->
   <div class="ycu-footer">
     <div class="row">
       <div class="small-12 columns">
-        <p class="colophon">Celebrating the cities we love.</p>
+        <p class="colophon">{{site.tagline}}</p>
          <p class="copyright"><a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">CC BY-SA 2013</a> by <a href="http://twitter.com/sjwilliams">@sjwilliams</a>. Video copyright by their author.</p>
       </div>          
     </div>

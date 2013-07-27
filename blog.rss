@@ -7,7 +7,7 @@ origin: /
 <channel>
   <title>{{site.title}}</title>
   <link>{{site.siteurl}}</link>
-  <description>{{site.tagline}</description>
+  <description>{{site.tagline}}</description>
   <language>en</language>
   {% for item in site.posts limit:40 %}{% include rss-item.xml %}{% endfor %}
 </channel>

@@ -31,32 +31,34 @@
 </head>
 <body class="layout-{{page.layout}}{% if  page.categories %} category-{{page.categories}}{% endif %}{% if  page.tags %}{% for tags in page.tags %} category-{{tags}}{% endfor %}{% endif %}">
   <!-- NAV -->
-  <nav class="top-bar">
-    <ul class="title-area">
-      <!-- Title Area -->
-      <li class="name">
-        <h1><a href="/">You Captivate Us</a></h1>
-      </li>
-      <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-      <li class="toggle-topbar menu-icon"><a href="#"><span>Cities</span></a></li>
-    </ul>
-
-    <section class="top-bar-section">
-      <!-- Right Nav Section -->
-      <ul class="right">
-        <li class="divider hide-for-small"></li>
-        <li class=""><a href="#">NYC</a></li>
-        <li class="divider"></li>
-        <li class=""><a href="#">SF</a></li>
-        <li class="divider"></li>
-        <li class=""><a href="#">Paris</a></li>
-        <li class="divider"></li>
-        <li class=""><a href="#">London</a></li>
-        <li class="divider"></li>
-        <li class=""><a href="#">Tokyo</a></li>
+  <div class="fixed">
+    <nav class="top-bar">
+      <ul class="title-area">
+        <!-- Title Area -->
+        <li class="name">
+          <h1><a href="/">You Captivate Us</a></h1>
+        </li>
+        <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Cities</span></a></li>
       </ul>
-    </section>
-  </nav>
+
+      <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+          <li class="divider hide-for-small"></li>
+          <li class=""><a href="{{site.baseurl}}/cities/new-york-city/">NYC</a></li>
+          <li class="divider"></li>
+          <li class=""><a href="{{site.baseurl}}/cities/san-francisco/">SF</a></li>
+          <li class="divider"></li>
+          <li class=""><a href="{{site.baseurl}}/cities/paris/">Paris</a></li>
+          <li class="divider"></li>
+          <li class=""><a href="{{site.baseurl}}/cities/london/">London</a></li>
+          <li class="divider"></li>
+          <li class=""><a href="{{site.baseurl}}/cities/tokyo/">Tokyo</a></li>
+        </ul>
+      </section>
+    </nav>
+  </div>
   <!-- /NAV -->
 
   {{content}}

@@ -7,13 +7,17 @@ layout: page
 	{% assign bannerOffset = 0 %}
 {% endif %}
 
-
 {{content}}
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
+{% for item in site.categories[page.slug] limit:1000 %}
+  {% capture date %}{{ item.date | date: '%B %Y' }}{% endcapture %}
+  {% capture ndate %}{{ item.next.date | date: '%B %Y' }}{% endcapture %}
+
+  {% if date != ndate %}
+    <h4 class='month'>{{item.date | date: '%B %Y'}}</h4>
+  {% endif %}
+  <a class='item' href='{{site.baseurl}}{{item.url}}'>{{item.title}} <span class='date'>&#126; {{item.date | date:"%b %d"}}</span></a>
+{% endfor %}
 
 <script type="text/template" id="template-city-topper"> 
 	<div class="city-topper-wrapper"> 
@@ -24,9 +28,9 @@ layout: page
 					<h1>{{page.title}}</h1>
 				</div>
 			</div>
-			<div class="city-topper-meta">
-				<p class="credit"><a href="{{page.bannerSrc}}">{{page.bannerCredit}}</a></p>
-			</div>
+		</div>
+		<div class="city-topper-meta">
+			<p class="credit"><span>Photo:</span> <a href="{{page.bannerSrc}}">{{page.bannerCredit}}</a></p>
 		</div>
 	</div>
 </script>

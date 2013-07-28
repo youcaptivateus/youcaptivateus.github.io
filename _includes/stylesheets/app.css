@@ -5074,32 +5074,1046 @@ form.custom .custom.disabled {
   background: url("../images/webicons/webicon-vimeo.svg");
 }
 
+/* line 1, ../sass/_mediaelementplayer.scss */
+.mejs-container {
+  position: relative;
+  background: #000;
+  font-family: Helvetica, Arial;
+  text-align: left;
+  vertical-align: top;
+  text-indent: 0;
+}
+
+/* line 10, ../sass/_mediaelementplayer.scss */
+.me-plugin {
+  position: absolute;
+}
+
+/* line 14, ../sass/_mediaelementplayer.scss */
+.mejs-embed, .mejs-embed body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #000;
+  overflow: hidden;
+}
+
+/* line 23, ../sass/_mediaelementplayer.scss */
+.mejs-fullscreen {
+  /* set it to not show scroll bars so 100% will work */
+  overflow: hidden !important;
+}
+
+/* line 28, ../sass/_mediaelementplayer.scss */
+.mejs-container-fullscreen {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+/* line 38, ../sass/_mediaelementplayer.scss */
+.mejs-container-fullscreen .mejs-mediaelement,
+.mejs-container-fullscreen video {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 43, ../sass/_mediaelementplayer.scss */
+.mejs-clear {
+  clear: both;
+}
+
+/* Start: LAYERS */
+/* line 48, ../sass/_mediaelementplayer.scss */
+.mejs-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* line 54, ../sass/_mediaelementplayer.scss */
+.mejs-mediaelement {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 62, ../sass/_mediaelementplayer.scss */
+.mejs-poster {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+/* line 70, ../sass/_mediaelementplayer.scss */
+:root .mejs-poster img {
+  display: none;
+}
+
+/* line 74, ../sass/_mediaelementplayer.scss */
+.mejs-poster img {
+  border: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* line 80, ../sass/_mediaelementplayer.scss */
+.mejs-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* line 86, ../sass/_mediaelementplayer.scss */
+.mejs-overlay-play {
+  cursor: pointer;
+}
+
+/* line 90, ../sass/_mediaelementplayer.scss */
+.mejs-overlay-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  margin: -50px 0 0 -50px;
+  background: url(/images/mediaelement/bigplay.svg) no-repeat;
+}
+
+/* line 100, ../sass/_mediaelementplayer.scss */
+.no-svg .mejs-overlay-button {
+  background-image: url(/images/mediaelement/bigplay.png);
+}
+
+/* line 104, ../sass/_mediaelementplayer.scss */
+.mejs-overlay:hover .mejs-overlay-button {
+  background-position: 0 -100px;
+}
+
+/* line 108, ../sass/_mediaelementplayer.scss */
+.mejs-overlay-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  margin: -40px 0 0 -40px;
+  background: #333;
+  background: url(/images/mediaelement/background.png);
+  background: rgba(0, 0, 0, 0.9);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(50, 50, 50, 0.9)), to(rgba(0, 0, 0, 0.9)));
+  background: -webkit-linear-gradient(top, rgba(50, 50, 50, 0.9), rgba(0, 0, 0, 0.9));
+  background: -moz-linear-gradient(top, rgba(50, 50, 50, 0.9), rgba(0, 0, 0, 0.9));
+  background: -o-linear-gradient(top, rgba(50, 50, 50, 0.9), rgba(0, 0, 0, 0.9));
+  background: -ms-linear-gradient(top, rgba(50, 50, 50, 0.9), rgba(0, 0, 0, 0.9));
+  background: linear-gradient(rgba(50, 50, 50, 0.9), rgba(0, 0, 0, 0.9));
+}
+
+/* line 126, ../sass/_mediaelementplayer.scss */
+.mejs-overlay-loading span {
+  display: block;
+  width: 80px;
+  height: 80px;
+  background: transparent url(/images/mediaelement/loading.gif) 50% 50% no-repeat;
+}
+
+/* End: LAYERS */
+/* Start: CONTROL BAR */
+/* line 136, ../sass/_mediaelementplayer.scss */
+.mejs-container .mejs-controls {
+  position: absolute;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+  left: 0;
+  background: url(/images/mediaelement/background.png);
+  background: rgba(0, 0, 0, 0.7);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(50, 50, 50, 0.7)), to(rgba(0, 0, 0, 0.7)));
+  background: -webkit-linear-gradient(top, rgba(50, 50, 50, 0.7), rgba(0, 0, 0, 0.7));
+  background: -moz-linear-gradient(top, rgba(50, 50, 50, 0.7), rgba(0, 0, 0, 0.7));
+  background: -o-linear-gradient(top, rgba(50, 50, 50, 0.7), rgba(0, 0, 0, 0.7));
+  background: -ms-linear-gradient(top, rgba(50, 50, 50, 0.7), rgba(0, 0, 0, 0.7));
+  background: linear-gradient(rgba(50, 50, 50, 0.7), rgba(0, 0, 0, 0.7));
+  height: 30px;
+  width: 100%;
+}
+
+/* line 154, ../sass/_mediaelementplayer.scss */
+.mejs-container .mejs-controls div {
+  list-style-type: none;
+  background-image: none;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 26px;
+  height: 26px;
+  font-size: 11px;
+  line-height: 11px;
+  font-family: Helvetica, Arial;
+  border: 0;
+}
+
+/* line 169, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-button button {
+  cursor: pointer;
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  text-decoration: none;
+  margin: 7px 5px;
+  padding: 0;
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  border: 0;
+  background: transparent url(/images/mediaelement/controls.svg) no-repeat;
+}
+
+/* line 184, ../sass/_mediaelementplayer.scss */
+.no-svg .mejs-controls .mejs-button button {
+  background-image: url(/images/mediaelement/controls.png);
+}
+
+/* :focus for accessibility */
+/* line 189, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-button button:focus {
+  outline: solid 1px yellow;
+}
+
+/* End: CONTROL BAR */
+/* Start: Time (Current / Duration) */
+/* line 196, ../sass/_mediaelementplayer.scss */
+.mejs-container .mejs-controls .mejs-time {
+  color: #fff;
+  display: block;
+  height: 17px;
+  width: auto;
+  padding: 8px 3px 0 3px;
+  overflow: hidden;
+  text-align: center;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* line 209, ../sass/_mediaelementplayer.scss */
+.mejs-container .mejs-controls .mejs-time span {
+  color: #fff;
+  font-size: 11px;
+  line-height: 12px;
+  display: block;
+  float: left;
+  margin: 1px 2px 0 0;
+  width: auto;
+}
+
+/* End: Time (Current / Duration) */
+/* Start: Play/Pause/Stop */
+/* line 221, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-play button {
+  background-position: 0 0;
+}
+
+/* line 225, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-pause button {
+  background-position: 0 -16px;
+}
+
+/* line 229, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-stop button {
+  background-position: -112px 0;
+}
+
+/* Start: Play/Pause/Stop */
+/* Start: Progress Bar */
+/* line 235, ../sass/_mediaelementplayer.scss */
+.mejs-controls div.mejs-time-rail {
+  width: 200px;
+  padding-top: 5px;
+}
+
+/* line 240, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-time-rail span {
+  display: block;
+  position: absolute;
+  width: 180px;
+  height: 10px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+/* line 251, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-time-rail .mejs-time-total {
+  margin: 5px;
+  background: #333;
+  background: rgba(50, 50, 50, 0.8);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(30, 30, 30, 0.8)), to(rgba(60, 60, 60, 0.8)));
+  background: -webkit-linear-gradient(top, rgba(30, 30, 30, 0.8), rgba(60, 60, 60, 0.8));
+  background: -moz-linear-gradient(top, rgba(30, 30, 30, 0.8), rgba(60, 60, 60, 0.8));
+  background: -o-linear-gradient(top, rgba(30, 30, 30, 0.8), rgba(60, 60, 60, 0.8));
+  background: -ms-linear-gradient(top, rgba(30, 30, 30, 0.8), rgba(60, 60, 60, 0.8));
+  background: linear-gradient(rgba(30, 30, 30, 0.8), rgba(60, 60, 60, 0.8));
+}
+
+/* line 263, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-time-rail .mejs-time-buffering {
+  width: 100%;
+  background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  -webkit-background-size: 15px 15px;
+  -moz-background-size: 15px 15px;
+  -o-background-size: 15px 15px;
+  background-size: 15px 15px;
+  -webkit-animation: buffering-stripes 2s linear infinite;
+  -moz-animation: buffering-stripes 2s linear infinite;
+  -ms-animation: buffering-stripes 2s linear infinite;
+  -o-animation: buffering-stripes 2s linear infinite;
+  animation: buffering-stripes 2s linear infinite;
+}
+
+@-webkit-keyframes buffering-stripes {
+  /* line 282, ../sass/_mediaelementplayer.scss */
+  from {
+    background-position: 0 0;
+  }
+
+  /* line 282, ../sass/_mediaelementplayer.scss */
+  to {
+    background-position: 30px 0;
+  }
+}
+
+@-moz-keyframes buffering-stripes {
+  /* line 283, ../sass/_mediaelementplayer.scss */
+  from {
+    background-position: 0 0;
+  }
+
+  /* line 283, ../sass/_mediaelementplayer.scss */
+  to {
+    background-position: 30px 0;
+  }
+}
+
+@-ms-keyframes buffering-stripes {
+  /* line 284, ../sass/_mediaelementplayer.scss */
+  from {
+    background-position: 0 0;
+  }
+
+  /* line 284, ../sass/_mediaelementplayer.scss */
+  to {
+    background-position: 30px 0;
+  }
+}
+
+@-o-keyframes buffering-stripes {
+  /* line 285, ../sass/_mediaelementplayer.scss */
+  from {
+    background-position: 0 0;
+  }
+
+  /* line 285, ../sass/_mediaelementplayer.scss */
+  to {
+    background-position: 30px 0;
+  }
+}
+
+@keyframes buffering-stripes {
+  /* line 286, ../sass/_mediaelementplayer.scss */
+  from {
+    background-position: 0 0;
+  }
+
+  /* line 286, ../sass/_mediaelementplayer.scss */
+  to {
+    background-position: 30px 0;
+  }
+}
+
+/* line 288, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-time-rail .mejs-time-loaded {
+  background: #3caac8;
+  background: rgba(60, 170, 200, 0.8);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(44, 124, 145, 0.8)), to(rgba(78, 183, 212, 0.8)));
+  background: -webkit-linear-gradient(top, rgba(44, 124, 145, 0.8), rgba(78, 183, 212, 0.8));
+  background: -moz-linear-gradient(top, rgba(44, 124, 145, 0.8), rgba(78, 183, 212, 0.8));
+  background: -o-linear-gradient(top, rgba(44, 124, 145, 0.8), rgba(78, 183, 212, 0.8));
+  background: -ms-linear-gradient(top, rgba(44, 124, 145, 0.8), rgba(78, 183, 212, 0.8));
+  background: linear-gradient(rgba(44, 124, 145, 0.8), rgba(78, 183, 212, 0.8));
+  width: 0;
+}
+
+/* line 300, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-time-rail .mejs-time-current {
+  background: #fff;
+  background: rgba(255, 255, 255, 0.8);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255, 255, 255, 0.9)), to(rgba(200, 200, 200, 0.8)));
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.9), rgba(200, 200, 200, 0.8));
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.9), rgba(200, 200, 200, 0.8));
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0.9), rgba(200, 200, 200, 0.8));
+  background: -ms-linear-gradient(top, rgba(255, 255, 255, 0.9), rgba(200, 200, 200, 0.8));
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(200, 200, 200, 0.8));
+  width: 0;
+}
+
+/* line 312, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-time-rail .mejs-time-handle {
+  display: none;
+  position: absolute;
+  margin: 0;
+  width: 10px;
+  background: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: solid 2px #333;
+  top: -2px;
+  text-align: center;
+}
+
+/* line 327, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-time-rail .mejs-time-float {
+  position: absolute;
+  display: none;
+  background: #eee;
+  width: 36px;
+  height: 17px;
+  border: solid 1px #333;
+  top: -26px;
+  margin-left: -18px;
+  text-align: center;
+  color: #111;
+}
+
+/* line 340, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-time-rail .mejs-time-float-current {
+  margin: 2px;
+  width: 30px;
+  display: block;
+  text-align: center;
+  left: 0;
+}
+
+/* line 348, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-time-rail .mejs-time-float-corner {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  border: solid 5px #eee;
+  border-color: #eee transparent transparent transparent;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  top: 15px;
+  left: 13px;
+}
+
+/* line 363, ../sass/_mediaelementplayer.scss */
+.mejs-long-video .mejs-controls .mejs-time-rail .mejs-time-float {
+  width: 48px;
+}
+
+/* line 367, ../sass/_mediaelementplayer.scss */
+.mejs-long-video .mejs-controls .mejs-time-rail .mejs-time-float-current {
+  width: 44px;
+}
+
+/* line 371, ../sass/_mediaelementplayer.scss */
+.mejs-long-video .mejs-controls .mejs-time-rail .mejs-time-float-corner {
+  left: 18px;
+}
+
+/*
+.mejs-controls .mejs-time-rail:hover .mejs-time-handle {
+	visibility:visible;
+}
+*/
+/* End: Progress Bar */
+/* Start: Fullscreen */
+/* line 383, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-fullscreen-button button {
+  background-position: -32px 0;
+}
+
+/* line 387, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-unfullscreen button {
+  background-position: -32px -16px;
+}
+
+/* End: Fullscreen */
+/* Start: Mute/Volume */
+/* line 397, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-mute button {
+  background-position: -16px -16px;
+}
+
+/* line 401, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-unmute button {
+  background-position: -16px 0;
+}
+
+/* line 405, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-volume-button {
+  position: relative;
+}
+
+/* line 409, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-volume-button .mejs-volume-slider {
+  display: none;
+  height: 115px;
+  width: 25px;
+  background: url(/images/mediaelement/background.png);
+  background: rgba(50, 50, 50, 0.7);
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  top: -115px;
+  left: 0;
+  z-index: 1;
+  position: absolute;
+  margin: 0;
+}
+
+/* line 425, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-volume-button:hover {
+  -webkit-border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  border-radius: 0 0 4px 4px;
+}
+
+/*
+.mejs-controls .mejs-volume-button:hover .mejs-volume-slider {
+	display: block;
+}
+*/
+/* line 437, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-total {
+  position: absolute;
+  left: 11px;
+  top: 8px;
+  width: 2px;
+  height: 100px;
+  background: #ddd;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+/* line 448, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-current {
+  position: absolute;
+  left: 11px;
+  top: 8px;
+  width: 2px;
+  height: 100px;
+  background: #ddd;
+  background: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+/* line 459, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-handle {
+  position: absolute;
+  left: 4px;
+  top: -3px;
+  width: 16px;
+  height: 6px;
+  background: #ddd;
+  background: rgba(255, 255, 255, 0.9);
+  cursor: N-resize;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+  margin: 0;
+}
+
+/* horizontal version */
+/* line 475, ../sass/_mediaelementplayer.scss */
+.mejs-controls div.mejs-horizontal-volume-slider {
+  height: 26px;
+  width: 60px;
+  position: relative;
+}
+
+/* line 481, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total {
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 50px;
+  height: 8px;
+  margin: 0;
+  padding: 0;
+  font-size: 1px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background: #333;
+  background: rgba(50, 50, 50, 0.8);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(30, 30, 30, 0.8)), to(rgba(60, 60, 60, 0.8)));
+  background: -webkit-linear-gradient(top, rgba(30, 30, 30, 0.8), rgba(60, 60, 60, 0.8));
+  background: -moz-linear-gradient(top, rgba(30, 30, 30, 0.8), rgba(60, 60, 60, 0.8));
+  background: -o-linear-gradient(top, rgba(30, 30, 30, 0.8), rgba(60, 60, 60, 0.8));
+  background: -ms-linear-gradient(top, rgba(30, 30, 30, 0.8), rgba(60, 60, 60, 0.8));
+  background: linear-gradient(rgba(30, 30, 30, 0.8), rgba(60, 60, 60, 0.8));
+}
+
+/* line 503, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 50px;
+  height: 8px;
+  margin: 0;
+  padding: 0;
+  font-size: 1px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background: #fff;
+  background: rgba(255, 255, 255, 0.8);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255, 255, 255, 0.9)), to(rgba(200, 200, 200, 0.8)));
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.9), rgba(200, 200, 200, 0.8));
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.9), rgba(200, 200, 200, 0.8));
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0.9), rgba(200, 200, 200, 0.8));
+  background: -ms-linear-gradient(top, rgba(255, 255, 255, 0.9), rgba(200, 200, 200, 0.8));
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(200, 200, 200, 0.8));
+}
+
+/* line 525, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-handle {
+  display: none;
+}
+
+/* End: Mute/Volume */
+/* Start: Track (Captions and Chapters) */
+/* line 532, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-captions-button {
+  position: relative;
+}
+
+/* line 536, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-captions-button button {
+  background-position: -48px 0;
+}
+
+/* line 539, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-captions-button .mejs-captions-selector {
+  visibility: hidden;
+  position: absolute;
+  bottom: 26px;
+  right: -10px;
+  width: 130px;
+  height: 100px;
+  background: url(/images/mediaelement/background.png);
+  background: rgba(50, 50, 50, 0.7);
+  border: solid 1px transparent;
+  padding: 10px;
+  overflow: hidden;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+/*
+.mejs-controls .mejs-captions-button:hover  .mejs-captions-selector {
+	visibility: visible;
+}
+*/
+/* line 562, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-captions-button .mejs-captions-selector ul {
+  margin: 0;
+  padding: 0;
+  display: block;
+  list-style-type: none !important;
+  overflow: hidden;
+}
+
+/* line 570, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-captions-button .mejs-captions-selector ul li {
+  margin: 0 0 6px 0;
+  padding: 0;
+  list-style-type: none !important;
+  display: block;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* line 579, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-captions-button .mejs-captions-selector ul li input {
+  clear: both;
+  float: left;
+  margin: 3px 3px 0 5px;
+}
+
+/* line 585, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-captions-button .mejs-captions-selector ul li label {
+  width: 100px;
+  float: left;
+  padding: 4px 0 0 0;
+  line-height: 15px;
+  font-family: helvetica, arial;
+  font-size: 10px;
+}
+
+/* line 594, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-captions-button .mejs-captions-translations {
+  font-size: 10px;
+  margin: 0 0 5px 0;
+}
+
+/* line 599, ../sass/_mediaelementplayer.scss */
+.mejs-chapters {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -xborder-right: solid 1px #fff;
+  width: 10000px;
+  z-index: 1;
+}
+
+/* line 608, ../sass/_mediaelementplayer.scss */
+.mejs-chapters .mejs-chapter {
+  position: absolute;
+  float: left;
+  background: #222;
+  background: rgba(0, 0, 0, 0.7);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(50, 50, 50, 0.7)), to(rgba(0, 0, 0, 0.7)));
+  background: -webkit-linear-gradient(top, rgba(50, 50, 50, 0.7), rgba(0, 0, 0, 0.7));
+  background: -moz-linear-gradient(top, rgba(50, 50, 50, 0.7), rgba(0, 0, 0, 0.7));
+  background: -o-linear-gradient(top, rgba(50, 50, 50, 0.7), rgba(0, 0, 0, 0.7));
+  background: -ms-linear-gradient(top, rgba(50, 50, 50, 0.7), rgba(0, 0, 0, 0.7));
+  background: linear-gradient(rgba(50, 50, 50, 0.7), rgba(0, 0, 0, 0.7));
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr=#323232,endColorstr=#000000);
+  overflow: hidden;
+  border: 0;
+}
+
+/* line 624, ../sass/_mediaelementplayer.scss */
+.mejs-chapters .mejs-chapter .mejs-chapter-block {
+  font-size: 11px;
+  color: #fff;
+  padding: 5px;
+  display: block;
+  border-right: solid 1px #333;
+  border-bottom: solid 1px #333;
+  cursor: pointer;
+}
+
+/* line 634, ../sass/_mediaelementplayer.scss */
+.mejs-chapters .mejs-chapter .mejs-chapter-block-last {
+  border-right: none;
+}
+
+/* line 638, ../sass/_mediaelementplayer.scss */
+.mejs-chapters .mejs-chapter .mejs-chapter-block:hover {
+  background: #666;
+  background: rgba(102, 102, 102, 0.7);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(102, 102, 102, 0.7)), to(rgba(50, 50, 50, 0.6)));
+  background: -webkit-linear-gradient(top, rgba(102, 102, 102, 0.7), rgba(50, 50, 50, 0.6));
+  background: -moz-linear-gradient(top, rgba(102, 102, 102, 0.7), rgba(50, 50, 50, 0.6));
+  background: -o-linear-gradient(top, rgba(102, 102, 102, 0.7), rgba(50, 50, 50, 0.6));
+  background: -ms-linear-gradient(top, rgba(102, 102, 102, 0.7), rgba(50, 50, 50, 0.6));
+  background: linear-gradient(rgba(102, 102, 102, 0.7), rgba(50, 50, 50, 0.6));
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr=#666666,endColorstr=#323232);
+}
+
+/* line 650, ../sass/_mediaelementplayer.scss */
+.mejs-chapters .mejs-chapter .mejs-chapter-block .ch-title {
+  font-size: 12px;
+  font-weight: bold;
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: 0 0 3px 0;
+  line-height: 12px;
+}
+
+/* line 660, ../sass/_mediaelementplayer.scss */
+.mejs-chapters .mejs-chapter .mejs-chapter-block .ch-timespan {
+  font-size: 12px;
+  line-height: 12px;
+  margin: 3px 0 4px 0;
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* line 669, ../sass/_mediaelementplayer.scss */
+.mejs-captions-layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  line-height: 22px;
+  font-size: 12px;
+  color: #fff;
+}
+
+/* line 679, ../sass/_mediaelementplayer.scss */
+.mejs-captions-layer a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* line 684, ../sass/_mediaelementplayer.scss */
+.mejs-captions-layer[lang=ar] {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+/* line 689, ../sass/_mediaelementplayer.scss */
+.mejs-captions-position {
+  position: absolute;
+  width: 100%;
+  bottom: 15px;
+  left: 0;
+}
+
+/* line 696, ../sass/_mediaelementplayer.scss */
+.mejs-captions-position-hover {
+  bottom: 45px;
+}
+
+/* line 700, ../sass/_mediaelementplayer.scss */
+.mejs-captions-text {
+  padding: 3px 5px;
+  background: url(/images/mediaelement/background.png);
+  background: rgba(20, 20, 20, 0.8);
+}
+
+/* End: Track (Captions and Chapters) */
+/* Start: Error */
+/* line 712, ../sass/_mediaelementplayer.scss */
+.me-cannotplay a {
+  color: #fff;
+  font-weight: bold;
+}
+
+/* line 717, ../sass/_mediaelementplayer.scss */
+.me-cannotplay span {
+  padding: 15px;
+  display: block;
+}
+
+/* End: Error */
+/* Start: Loop */
+/* line 725, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-loop-off button {
+  background-position: -64px -16px;
+}
+
+/* line 729, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-loop-on button {
+  background-position: -64px 0;
+}
+
+/* End: Loop */
+/* Start: backlight */
+/* line 736, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-backlight-off button {
+  background-position: -80px -16px;
+}
+
+/* line 740, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-backlight-on button {
+  background-position: -80px 0;
+}
+
+/* End: backlight */
+/* Start: Picture Controls */
+/* line 746, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-picturecontrols-button {
+  background-position: -96px 0;
+}
+
+/* End: Picture Controls */
+/* context menu */
+/* line 753, ../sass/_mediaelementplayer.scss */
+.mejs-contextmenu {
+  position: absolute;
+  width: 150px;
+  padding: 10px;
+  border-radius: 4px;
+  top: 0;
+  left: 0;
+  background: #fff;
+  border: solid 1px #999;
+  z-index: 1001;
+  /* make sure it shows on fullscreen */
+}
+
+/* line 764, ../sass/_mediaelementplayer.scss */
+.mejs-contextmenu .mejs-contextmenu-separator {
+  height: 1px;
+  font-size: 0;
+  margin: 5px 6px;
+  background: #333;
+}
+
+/* line 771, ../sass/_mediaelementplayer.scss */
+.mejs-contextmenu .mejs-contextmenu-item {
+  font-family: Helvetica, Arial;
+  font-size: 12px;
+  padding: 4px 6px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* line 778, ../sass/_mediaelementplayer.scss */
+.mejs-contextmenu .mejs-contextmenu-item:hover {
+  background: #2C7C91;
+  color: #fff;
+}
+
+/* Start: Source Chooser */
+/* line 784, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-sourcechooser-button {
+  position: relative;
+}
+
+/* line 788, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-sourcechooser-button button {
+  background-position: -128px 0;
+}
+
+/* line 792, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector {
+  visibility: hidden;
+  position: absolute;
+  bottom: 26px;
+  right: -10px;
+  width: 130px;
+  height: 100px;
+  background: url(/images/mediaelement/background.png);
+  background: rgba(50, 50, 50, 0.7);
+  border: solid 1px transparent;
+  padding: 10px;
+  overflow: hidden;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+/* line 809, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul {
+  margin: 0;
+  padding: 0;
+  display: block;
+  list-style-type: none !important;
+  overflow: hidden;
+}
+
+/* line 817, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul li {
+  margin: 0 0 6px 0;
+  padding: 0;
+  list-style-type: none !important;
+  display: block;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* line 826, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul li input {
+  clear: both;
+  float: left;
+  margin: 3px 3px 0 5px;
+}
+
+/* line 832, ../sass/_mediaelementplayer.scss */
+.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul li label {
+  width: 100px;
+  float: left;
+  padding: 4px 0 0 0;
+  line-height: 15px;
+  font-family: helvetica, arial;
+  font-size: 10px;
+}
+
+/* End: Source Chooser */
+/* Start: Postroll */
+/* line 843, ../sass/_mediaelementplayer.scss */
+.mejs-postroll-layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(/images/mediaelement/background.png);
+  background: rgba(50, 50, 50, 0.7);
+  z-index: 1000;
+  overflow: hidden;
+}
+
+/* line 854, ../sass/_mediaelementplayer.scss */
+.mejs-postroll-layer-content {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 858, ../sass/_mediaelementplayer.scss */
+.mejs-postroll-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: url(/images/mediaelement/background.png);
+  background: rgba(50, 50, 50, 0.7);
+  color: #fff;
+  padding: 4px;
+  z-index: 100;
+  cursor: pointer;
+}
+
+/* End: Postroll */
 /*
 * Common Navigation
 */
-/* line 58, ../sass/app.scss */
+/* line 59, ../sass/app.scss */
 .top-bar {
   margin-bottom: 0;
   background: #282828 url("../images/skewed_print.png") repeat 0 0;
 }
 
-/* line 64, ../sass/app.scss */
+/* line 65, ../sass/app.scss */
 .top-bar .name h1 a {
   font-weight: 100;
   font-size: 1.2em;
 }
 
-/* line 69, ../sass/app.scss */
+/* line 70, ../sass/app.scss */
 html.touch .top-bar .name h1 a {
   font-weight: 300;
 }
 
-/* line 73, ../sass/app.scss */
+/* line 74, ../sass/app.scss */
 .top-bar-section li a:not(.button) {
   background-color: #282828;
 }
 
-/* line 77, ../sass/app.scss */
+/* line 78, ../sass/app.scss */
 .top-bar-section ul li > a {
   color: #C5C5C5;
 }
@@ -5107,27 +6121,32 @@ html.touch .top-bar .name h1 a {
 /**
 * Video Page specifics
 */
-/* line 87, ../sass/app.scss */
+/* line 88, ../sass/app.scss */
 .fullscreen-video-wrapper {
   background-color: #000;
 }
 
-/* line 91, ../sass/app.scss */
+/* line 92, ../sass/app.scss */
 .fullscreen-video {
   background-color: #000;
   margin: 0 auto 1em auto;
 }
 
-/* line 96, ../sass/app.scss */
-.fullscreen-video iframe {
+/* line 97, ../sass/app.scss */
+.fullscreen-video iframe, .fullscreen-video video, .fullscreen-video .me-plugin {
   width: 100%;
   height: 100%;
+}
+
+/* line 103, ../sass/app.scss */
+.video-type-vimeo .mejs-controls {
+  display: none;
 }
 
 /**
 * Full-width page topper
 */
-/* line 105, ../sass/app.scss */
+/* line 111, ../sass/app.scss */
 .ycu-topper {
   width: 100%;
   overflow: hidden;
@@ -5136,33 +6155,33 @@ html.touch .top-bar .name h1 a {
 /**
 * Main Content Block
 */
-/* line 113, ../sass/app.scss */
+/* line 119, ../sass/app.scss */
 .ycu-content h2 {
   font-weight: 300;
 }
 
-/* line 117, ../sass/app.scss */
+/* line 123, ../sass/app.scss */
 .media-readin {
   font-family: Georgia, serif;
   font-size: 1.2em;
 }
 
-/* line 122, ../sass/app.scss */
+/* line 128, ../sass/app.scss */
 .media-credit {
   font-size: 0.9em;
 }
 
-/* line 126, ../sass/app.scss */
+/* line 132, ../sass/app.scss */
 .category-title, .category-link {
   display: inline-block;
 }
 
-/* line 130, ../sass/app.scss */
+/* line 136, ../sass/app.scss */
 .category-title {
   font-weight: 300;
 }
 
-/* line 134, ../sass/app.scss */
+/* line 140, ../sass/app.scss */
 .category-link {
   font-size: 0.8em;
   line-height: 0.9em;
@@ -5171,7 +6190,7 @@ html.touch .top-bar .name h1 a {
   border-left: 1px solid #ccc;
 }
 
-/* line 142, ../sass/app.scss */
+/* line 148, ../sass/app.scss */
 ul.social li {
   display: inline-block;
   list-style-type: none;
@@ -5179,7 +6198,7 @@ ul.social li {
   padding: 0;
 }
 
-/* line 149, ../sass/app.scss */
+/* line 155, ../sass/app.scss */
 li.add-video span {
   display: block;
   font-size: 64px;
@@ -5189,39 +6208,39 @@ li.add-video span {
   cursor: pointer;
 }
 
-/* line 159, ../sass/app.scss */
+/* line 165, ../sass/app.scss */
 .webicon {
   -webkit-filter: grayscale(1);
   -webkit-transition: -webkit-filter 0.3s ease-in;
   /* chrome & safari */
 }
 
-/* line 164, ../sass/app.scss */
+/* line 170, ../sass/app.scss */
 .webicon:hover, .webicon:active {
   -webkit-filter: grayscale(0);
 }
 
-/* line 168, ../sass/app.scss */
+/* line 174, ../sass/app.scss */
 .colophon {
   font-weight: 400;
   font-size: 1.2em;
 }
 
-/* line 173, ../sass/app.scss */
+/* line 179, ../sass/app.scss */
 .copyright {
   font-size: 0.7em;
 }
 
-/* line 177, ../sass/app.scss */
+/* line 183, ../sass/app.scss */
 .credit {
   font-size: 0.7em;
   color: #444;
 }
-/* line 181, ../sass/app.scss */
+/* line 187, ../sass/app.scss */
 .credit a {
   color: #444;
 }
-/* line 185, ../sass/app.scss */
+/* line 191, ../sass/app.scss */
 .credit span {
   color: #888;
 }
@@ -5229,7 +6248,7 @@ li.add-video span {
 /**
 * City Page
 */
-/* line 193, ../sass/app.scss */
+/* line 199, ../sass/app.scss */
 .city-topper-wrapper {
   position: relative;
   width: 100%;
@@ -5237,11 +6256,11 @@ li.add-video span {
   margin-bottom: 30px;
   overflow: hidden;
 }
-/* line 200, ../sass/app.scss */
+/* line 206, ../sass/app.scss */
 .city-topper-wrapper .row {
   margin-top: 269px;
 }
-/* line 204, ../sass/app.scss */
+/* line 210, ../sass/app.scss */
 .city-topper-wrapper h1 {
   margin: 0;
   padding: 0;
@@ -5252,7 +6271,7 @@ li.add-video span {
   font-weight: 300;
 }
 
-/* line 215, ../sass/app.scss */
+/* line 221, ../sass/app.scss */
 .city-topper-image {
   position: relative;
   height: 370px;
@@ -5265,18 +6284,18 @@ li.add-video span {
   background-size: cover;
 }
 
-/* line 227, ../sass/app.scss */
+/* line 233, ../sass/app.scss */
 .no-touch .city-topper-image {
   background-attachment: fixed;
 }
 
-/* line 231, ../sass/app.scss */
+/* line 237, ../sass/app.scss */
 .city-topper-meta {
   position: absolute;
   bottom: 0;
   right: 30px;
 }
-/* line 236, ../sass/app.scss */
+/* line 242, ../sass/app.scss */
 .city-topper-meta p {
   padding: 0;
   margin: 0;
@@ -5286,12 +6305,12 @@ li.add-video span {
 /**
 * Footer
 */
-/* line 249, ../sass/app.scss */
+/* line 255, ../sass/app.scss */
 .ycu-footer {
   margin-top: 3em;
   text-align: center;
 }
-/* line 253, ../sass/app.scss */
+/* line 259, ../sass/app.scss */
 .ycu-footer .copyright {
   padding: 1.3em 0;
   border-top: 1px solid #6D6D6D;

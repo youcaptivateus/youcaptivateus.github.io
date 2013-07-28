@@ -46,6 +46,7 @@
 // @import "foundation/components/tooltips";
 @import "foundation/components/dropdown";
 @import "webicons";
+@import "mediaelementplayer";
 
 
 body{
@@ -93,9 +94,14 @@ body{
     margin: 0 auto 1em auto;
   }
 
-    .fullscreen-video iframe{
+    .fullscreen-video iframe, .fullscreen-video video, .fullscreen-video .me-plugin{
       width: 100%;
       height: 100%;
+    }
+
+    // vimeo can't use mej controls
+    .video-type-vimeo .mejs-controls{
+      display: none;
     }
 
 

@@ -8,15 +8,46 @@ YCU.VideoPage = {};
 		init: function(){
 			var that = this;
 
-			this.$video = $('.fullscreen-video');
+			var src = YCU.pageMeta.video;
 
-			// resize events
-			YCU.Main.resizeCallbacks.add(function(){
-				$.proxy(that.onResize(), that);
-			});
+			// build player if there's a video
+			if (src) {
 
-			// init actions
-			this.sizeVideo();
+				// vimeo or youtube
+				var type = (/player.vimeo.com/.test(src)) ? 'vimeo' : 'youtube';
+
+
+				YCU.Main.$body.addClass('video-type-'+type);
+
+				// build out video element from _ template
+				this.$videoContainer = $('.fullscreen-video').html(
+					_.template($('#template-video-element').html(), {
+						type: 'video/'+type,
+						src: src
+					})
+				);
+
+				this.sizeVideo();
+
+				// instantiate video-element-player
+				this.$video = this.$videoContainer.find('video').mediaelementplayer({
+					videoWidth: '100%',
+					videoHeight: '100%',
+					pluginPath: '/images/mediaelement/',
+					flashName: 'flashmediaelement.swf',
+					silverlightName: 'silverlightmediaelement.xap',
+					iPadUseNativeControls: true,
+					iPhoneUseNativeControls: true,
+					AndroidUseNativeControls: true
+				});
+
+				// resize events
+				YCU.Main.resizeCallbacks.add(function(){
+					$.proxy(that.onResize(), that);
+				});
+
+			}
+
 		},
 
 		onResize: function(){
@@ -38,7 +69,7 @@ YCU.VideoPage = {};
 				css.height = YCU.Main.viewportWidth * 0.5625;
 			}
 
-			this.$video.css(css);
+			this.$videoContainer.css(css);
 		}
 	});
 

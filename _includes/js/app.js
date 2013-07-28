@@ -25,6 +25,7 @@ YCU.Main = {};
 
 			// base DOM elements
 			this.$w = $(window);
+			this.$body = $('body');
 			this.$nav = $('nav.top-bar');
 			this.$topper = $('.ycu-topper');
 

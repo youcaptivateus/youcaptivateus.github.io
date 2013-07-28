@@ -2,13 +2,10 @@
 layout: default
 section: video
 ---
-
 	<div class="ycu-topper">
 		<!-- featured video -->
 		<div class="fullscreen-video-wrapper">
-			<div class="fullscreen-video">
-				<iframe src="http://player.vimeo.com/video/10839224?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-			</div>
+			<div class="fullscreen-video"></div>
 		</div>
 	</div>
 
@@ -26,6 +23,7 @@ section: video
 
 		<div class="row">
 			<div class="large-9 columns">
+				<!-- TODO: markdownify adds additional P tags. fix this. -->
 				<p class="media-readin">{{page.content | markdownify }}</p>
 				
 			</div>
@@ -72,3 +70,15 @@ section: video
 
 	</div>
 	<!-- /ycu-content -->
+
+
+	<script type="text/template" id="template-video-element"> 
+		<video>
+		    <source src="<%= src %>" type="<%= type %>" >
+		</video>
+	</script>
+	<script type="text/javascript">
+	var YCU = YCU || {};
+	YCU.pageMeta = YCU.pageMeta || {};
+	YCU.pageMeta.video = "{{page.video}}";
+	</script>

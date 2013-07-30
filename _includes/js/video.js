@@ -30,7 +30,10 @@ YCU.VideoPage = {};
 				this.sizeVideo();
 
 				// instantiate video-element-player
-				this.$video = this.$videoContainer.find('video').mediaelementplayer({
+				this.videoId = _.uniqueId('video_');
+				this.$video = this.$videoContainer.find('video').attr('id',this.videoId);
+
+				this.player = new MediaElementPlayer('#'+this.videoId,{
 					videoWidth: '100%',
 					videoHeight: '100%',
 					pluginPath: '/images/mediaelement/',
@@ -38,8 +41,30 @@ YCU.VideoPage = {};
 					silverlightName: 'silverlightmediaelement.xap',
 					iPadUseNativeControls: true,
 					iPhoneUseNativeControls: true,
-					AndroidUseNativeControls: true
+					AndroidUseNativeControls: true,
+
+					success: function(){
+						console.log('boom');
+					}
 				});
+
+
+				// .mediaelementplayer({
+				// 	videoWidth: '100%',
+				// 	videoHeight: '100%',
+				// 	pluginPath: '/images/mediaelement/',
+				// 	flashName: 'flashmediaelement.swf',
+				// 	silverlightName: 'silverlightmediaelement.xap',
+				// 	iPadUseNativeControls: true,
+				// 	iPhoneUseNativeControls: true,
+				// 	AndroidUseNativeControls: true
+				// });
+
+				// this.player = this.$video[0].player;
+
+				// this.player.addEventListener('timeupdate', function(){
+				// 	console.log('event!');
+				// });
 
 				// resize events
 				YCU.Main.resizeCallbacks.add(function(){

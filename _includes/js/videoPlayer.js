@@ -9,9 +9,8 @@ YCU.ui = YCU.ui || {};
 
 	NS.VideoPlayer = function(el, opts){
 
-		opts = $.extend(true, {
+		this.opts = $.extend(true, {
 			src: null,
-			type: 'vimeo',
 			mep:{
 				videoWidth: '100%',
 				videoHeight: '100%',
@@ -24,14 +23,17 @@ YCU.ui = YCU.ui || {};
 			}
 		}, opts);
 
+		// vimeo or youtube
+		this.opts.type = (/player.vimeo.com/.test(this.opts.src)) ? 'vimeo' : 'youtube';
+
 		// if container is string, make jQ object
 		this.$videoContainer = (typeof el === 'object') ? el : $(el);
 
 		// build out video element from _ template
 		this.$videoContainer.html(
 			_.template($('#template-video-element').html(), {
-				type: 'video/'+opts.type,
-				src: opts.src
+				type: 'video/'+this.opts.type,
+				src: this.opts.src
 			})
 		);
 
@@ -56,6 +58,12 @@ YCU.ui = YCU.ui || {};
 			}
 		});
 
+	}
+
+	NS.VideoPlayer.prototype = {
+		getType: function(){
+			return this.opts.type;
+		}
 	}
 
 

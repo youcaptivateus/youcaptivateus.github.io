@@ -13,11 +13,9 @@ YCU.VideoPage = {};
 			// build player if there's a video
 			if (src) {
 
-				// vimeo or youtube
-				var type = (/player.vimeo.com/.test(src)) ? 'vimeo' : 'youtube';
+				
 
 
-				YCU.Main.$body.addClass('video-type-'+type);
 
 				// presize video container
 				this.$videoContainer = $('.fullscreen-video');
@@ -25,9 +23,11 @@ YCU.VideoPage = {};
 
 				// build new video player
 				this.player = new YCU.ui.VideoPlayer(this.$videoContainer,{
-					src: src,
-					type: type
+					src: src
 				});
+				
+				var type = this.player.getType();
+				YCU.Main.$body.addClass('video-type-'+type);
 
 				// resize events
 				YCU.Main.resizeCallbacks.add(function(){

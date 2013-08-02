@@ -19,52 +19,15 @@ YCU.VideoPage = {};
 
 				YCU.Main.$body.addClass('video-type-'+type);
 
-				// build out video element from _ template
-				this.$videoContainer = $('.fullscreen-video').html(
-					_.template($('#template-video-element').html(), {
-						type: 'video/'+type,
-						src: src
-					})
-				);
-
+				// presize video container
+				this.$videoContainer = $('.fullscreen-video');
 				this.sizeVideo();
 
-				// instantiate video-element-player
-				this.videoId = _.uniqueId('video_');
-				this.$video = this.$videoContainer.find('video').attr('id',this.videoId);
-
-				this.player = new MediaElementPlayer('#'+this.videoId,{
-					videoWidth: '100%',
-					videoHeight: '100%',
-					pluginPath: '/images/mediaelement/',
-					flashName: 'flashmediaelement.swf',
-					silverlightName: 'silverlightmediaelement.xap',
-					iPadUseNativeControls: true,
-					iPhoneUseNativeControls: true,
-					AndroidUseNativeControls: true,
-
-					success: function(){
-						console.log('boom');
-					}
+				// build new video player
+				this.player = new YCU.ui.VideoPlayer(this.$videoContainer,{
+					src: src,
+					type: type
 				});
-
-
-				// .mediaelementplayer({
-				// 	videoWidth: '100%',
-				// 	videoHeight: '100%',
-				// 	pluginPath: '/images/mediaelement/',
-				// 	flashName: 'flashmediaelement.swf',
-				// 	silverlightName: 'silverlightmediaelement.xap',
-				// 	iPadUseNativeControls: true,
-				// 	iPhoneUseNativeControls: true,
-				// 	AndroidUseNativeControls: true
-				// });
-
-				// this.player = this.$video[0].player;
-
-				// this.player.addEventListener('timeupdate', function(){
-				// 	console.log('event!');
-				// });
 
 				// resize events
 				YCU.Main.resizeCallbacks.add(function(){

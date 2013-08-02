@@ -20,6 +20,8 @@
 ;{% include js/vendor/jquery.stellar.min.js %}
 ;{% include js/vendor/mediaelement-and-player.min.js %}
 
+;{% include js/videoPlayer.js %} 
+
 ;{% include js/app.js %} 
 ;{% include js/video.js %} 
 ;{% include js/city.js %} 

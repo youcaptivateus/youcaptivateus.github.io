@@ -8,9 +8,9 @@ prose:
   media: 'media'
   metadata:
     _posts:
-      - name: "categories"
+      - name: "category"
         field:
-          element: "multiselect"
+          element: "select"
           label: "Select City"
           options:
             - name: "San Francisco"

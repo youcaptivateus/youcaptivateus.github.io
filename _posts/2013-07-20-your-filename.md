@@ -1,7 +1,9 @@
 ---
 layout: blog
-category: blog
-published: false
+category: 
+  - blog
+  - "san-francisco"
+published: true
 title: Tags test
 categories: 
   - sanfrancisco

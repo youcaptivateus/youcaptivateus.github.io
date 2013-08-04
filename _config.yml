@@ -10,7 +10,7 @@ prose:
     _posts:
      - name: "category"
        field:
-         element: "select"
+         element: "multiselect"
          label: "Add City"
          placeholder: "Choose city"
          options:

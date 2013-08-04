@@ -8,10 +8,22 @@ prose:
   media: 'media'
   metadata:
     _posts:
-      - name: "category"
-        field:
-          element: "hidden"
-          value: "blog"
+     - name: "category"
+       field:
+         element: "select"
+         label: "Add City"
+         placeholder: "Choose city"
+         options:
+           - name: "San Francisco"
+             value: "san-francisco"
+           - name: "New York"
+             value: "new-york"
+           - name: "Paris"
+             value: "paris"
+           - name: "Tokyo"
+             value: "tokyo"
+           - name: "London"
+             value: "london"
       - name: "layout"
         field:
           element: "hidden"

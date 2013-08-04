@@ -8,22 +8,21 @@ prose:
   media: 'media'
   metadata:
     _posts:
-     - name: "category"
-       field:
-         element: "multiselect"
-         label: "Add City"
-         placeholder: "Choose city"
-         options:
-           - name: "San Francisco"
-             value: "san-francisco"
-           - name: "New York"
-             value: "new-york"
-           - name: "Paris"
-             value: "paris"
-           - name: "Tokyo"
-             value: "tokyo"
-           - name: "London"
-             value: "london"
+      - name: "categories"
+        field:
+          element: "multiselect"
+          label: "Select City"
+          options:
+            - name: "San Francisco"
+              value: "san-francisco"
+            - name: "New York"
+              value: "new-york"
+            - name: "Paris"
+              value: "paris"
+            - name: "Tokyo"
+              value: "tokyo"
+            - name: "London"
+              value: "london"
       - name: "layout"
         field:
           element: "hidden"
@@ -33,15 +32,6 @@ prose:
           element: "text"
           label: "Title"
           value: ""
-      - name: "categories"
-        field:
-          element: "multiselect"
-          label: "Select City"
-          options:
-            - name: "San Francisco"
-              value: "sanfrancisco"
-            - name: "New York"
-              value: "newyork"
       - name: "tags"
         field:
           element: "multiselect"

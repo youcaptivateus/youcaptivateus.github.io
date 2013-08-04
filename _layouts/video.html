@@ -2,6 +2,8 @@
 layout: default
 section: video
 ---
+{% assign categorySlug = page.category %}
+{% include get-category-name.html %}
 	<div class="ycu-topper">
 		<!-- featured video -->
 		<div class="fullscreen-video-wrapper">
@@ -46,7 +48,7 @@ section: video
 		<!-- City Videos -->
 		<div class="row">
 			<div class="large-9 columns">
-				<h5 class="category-title">More from San Francisco</h5>
+				<h5 class="category-title">More from {{categoryName}}</h5>
 				<p class="category-link"><a href="{{site.baseurl}}/cities/{{page.categories | first }}/">View all</a></p>
 				<ul class="small-block-grid-2 large-block-grid-4 video-links">
 					{% for post in site.categories[page.category] limit:4 %}

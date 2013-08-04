@@ -1,0 +1,14 @@
+{% comment %} assign to categoryName the associated proper name for 'categorySlug' {% endcomment %}
+
+{% assign categoryExists = false %}
+{% for metadata in site.prose.metadata._posts %}
+  {% if metadata['name'] == 'category' %}
+    {% assign siteCategories = metadata['field']['options'] %}
+    {% for siteCategory in siteCategories %}
+    	{% if siteCategory['value'] == categorySlug %}
+    		{% assign categoryExists = true %}
+    		{% assign categoryName = siteCategory['name'] %}
+    	{% endif %}    	
+    {% endfor %}
+  {% endif %}
+{% endfor %}

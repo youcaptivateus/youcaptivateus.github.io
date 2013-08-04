@@ -1,18 +1,6 @@
-{% comment %} importing 'tagSlug' from parent {% endcomment %}
+{% comment %} Given a 'tagSlug' print its name and related posts {% endcomment %}
 
-{% comment %} Find cooresponding tag name from tagSlug {% endcomment %}
-{% assign tagExists = false %}
-{% for metadata in site.prose.metadata._posts %}
-  {% if metadata['name'] == 'tags' %}
-    {% assign siteTags = metadata['field']['options'] %}
-    {% for siteTag in siteTags %}
-    	{% if siteTag['value'] == tagSlug %}
-    		{% assign tagExists = true %}
-    		{% assign tagName = siteTag['name'] %}
-    	{% endif %}    	
-    {% endfor %}
-  {% endif %}
-{% endfor %}
+{% include get-tag-name.html %}
 
 {% comment %} If tagSlug existed in the site-wide tags and there is more than one item with that tag, print related {% endcomment %}
 {% assign numberOfPostsWithThisTag = site.tags[tagSlug]|size %}

@@ -1,0 +1,14 @@
+{% comment %} assign to tagName the associated proper name for 'tagSlug' {% endcomment %}
+
+{% assign tagExists = false %}
+{% for metadata in site.prose.metadata._posts %}
+  {% if metadata['name'] == 'tags' %}
+    {% assign siteTags = metadata['field']['options'] %}
+    {% for siteTag in siteTags %}
+    	{% if siteTag['value'] == tagSlug %}
+    		{% assign tagExists = true %}
+    		{% assign tagName = siteTag['name'] %}
+    	{% endif %}    	
+    {% endfor %}
+  {% endif %}
+{% endfor %}

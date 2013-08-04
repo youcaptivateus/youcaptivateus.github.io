@@ -1,4 +1,4 @@
-baseurl: 
+baseurl: /
 permalink: pretty
 markdown: rdiscount
 prose:
@@ -35,6 +35,7 @@ prose:
       - name: "tags"
         field:
           element: "multiselect"
+          alterable: true
           label: "Add Tags"
           placeholder: "Choose Tags"
           options:

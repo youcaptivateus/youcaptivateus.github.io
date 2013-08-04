@@ -253,11 +253,16 @@ li.add-video span{
 */
 
 .ycu-footer{
-  margin-top: 3em;
+  margin: 3em 0;
   text-align: center;
 
+  .colophon{
+    border-bottom: 1px solid #6D6D6D;
+    margin: 0 0 0.7em 0;
+    padding: 0 0 0.7em 0;
+  }
+
   .copyright{
-    padding: 1.3em 0;
-    border-top: 1px solid #6D6D6D;
+    margin: 0
   }
 }

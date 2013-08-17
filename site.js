@@ -22,6 +22,7 @@
 
 ;{% include js/videoPlayer.js %} 
 
+;{% include js/siteMeta.js %} 
 ;{% include js/app.js %} 
 ;{% include js/video.js %} 
 ;{% include js/city.js %} 

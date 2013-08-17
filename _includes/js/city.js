@@ -20,10 +20,19 @@ YCU.CityPage = {};
 			}
 
 
+			YCU.Main.$content.find('.curator-container').html(_.template($('#template-curator-box').html(),{
+				image: 'h',
+				name: 'name',
+				city: 'city',
+				twitter: 'tweet'
+			}));
+
 			// resize events
 			YCU.Main.resizeCallbacks.add(function(){
 				$.proxy(that.onResize(), that);
 			});
+
+
 
 		},
 

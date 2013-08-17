@@ -28,9 +28,9 @@
 // @import "foundation/components/reveal";
 // @import "foundation/components/joyride";
 // @import "foundation/components/clearing";
-// @import "foundation/components/alert-boxes";
+@import "foundation/components/alert-boxes";
 // @import "foundation/components/breadcrumbs";
-// @import "foundation/components/keystrokes";
+@import "foundation/components/keystrokes";
 // @import "foundation/components/labels";
 // @import "foundation/components/inline-lists";
 // @import "foundation/components/pagination";
@@ -48,6 +48,8 @@
 @import "webicons";
 @import "mediaelementplayer";
 
+
+@import "github";
 
 body{
 
@@ -126,7 +128,38 @@ body{
   }
 
   .media-credit{
-    font-size: 0.9em;
+    font-size: 0.36em;
+    font-family: Arial, sans-serif;
+    padding-left: 7px;
+    border-left: 1px solid #6d6d6d;
+
+    span{
+      background-color: #EEEE3E;
+      padding: 3px;
+    }
+
+    a{
+      color: #000;
+    }
+
+    a:hover,a:active{
+      text-decoration: underline;
+    }
+
+  }
+
+  .credit{
+    background-color: #EEEE3E;
+    padding: 1px;
+    font-size: 0.8em;
+
+    a{
+      color: #000;
+    }
+
+    a:hover,a:active{
+      text-decoration: underline;
+    }
   }
 
   .category-title, .category-link{
@@ -144,6 +177,41 @@ body{
       padding-left: 0.7em;
       border-left: 1px solid #ccc;
     }
+
+.curator-meta{
+  img{
+    display: block;
+    widows: 100%;
+  }
+
+  p{
+    font-family: $body-font-family;
+    font-weight: 300;
+    font-size: 1em;
+    line-height: 1.2em;
+  }
+
+  span{
+    font-weight: 400;
+  }
+}
+
+
+ul.video-links{
+
+  img{
+    display: block;
+    width: 100%;
+  }
+
+  .video-title{
+    font-family: $body-font-family;
+    font-weight: 300;
+    font-size: 1em;
+  }
+
+}
+
 
 ul.social li{
   display: inline-block;

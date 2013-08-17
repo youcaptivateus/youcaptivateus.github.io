@@ -28,7 +28,7 @@ YCU.Main = {};
 			this.$body = $('body');
 			this.$nav = $('nav.top-bar');
 			this.$topper = $('.ycu-topper');
-
+			this.$content = $('.ycu-content', this.$body);
 			this.$videoLinks = $('ul.video-links');
 
 			// updated measurements
